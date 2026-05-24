@@ -1,15 +1,83 @@
 # RealEstateManager
 
-A real estate management application.
+A modern web application for individual landlords to manage their rental properties.
 
-## Description
+## Features (MVP)
 
-[Add project description here]
+- Property & unit management with photo uploads
+- Tenant / contact management
+- Lease tracking with expiration alerts
+- Rent collection & payment history
+- Maintenance request tracking
+- Dashboard with key reports (occupancy, income, upcoming items)
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router) + TypeScript
+- **Styling**: Tailwind CSS 4 + shadcn/ui
+- **Database**: PostgreSQL + Prisma ORM
+- **Auth**: Auth.js v5
+- **Deployment**: Vercel
 
 ## Getting Started
 
-[Add setup and run instructions here]
+### Prerequisites
+
+- Node.js 20+
+- npm (or pnpm)
+
+### Installation
+
+```bash
+npm install
+# or
+pnpm install
+```
+
+### Environment Variables
+
+Copy the example env file and fill in your values:
+
+```bash
+cp .env.example .env.local
+```
+
+Required variables will be documented as features are added (database URL, auth secrets, etc.).
+
+### Run the Development Server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+## Project Structure
+
+This project follows a feature-based architecture:
+
+- `app/` – Next.js routes and layouts
+- `features/` – Domain logic (properties, tenants, leases, etc.)
+- `components/ui/` – Reusable shadcn/ui components
+- `lib/` – Shared utilities (Prisma client, auth config, etc.)
+- `prisma/` – Database schema and migrations
+
+## Development
+
+- `npm run dev` – Start development server
+- `npm run build` – Production build
+- `npm run lint` – Run ESLint
+
+## Roadmap
+
+See the detailed implementation plan in the project planning docs for phased delivery of the MVP.
 
 ## License
 
-[Specify license]
+Private project.
+
+## Deploy on Vercel
+
+The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
