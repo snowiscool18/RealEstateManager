@@ -24,98 +24,106 @@ export default function DashboardPage() {
 
       {/* Stats Grid */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-        <Card>
+        <Card className="hover:shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-sm font-medium">Properties</CardTitle>
-            <Home className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-slate-600">Properties</CardTitle>
+            <div className="rounded-lg bg-indigo-100 p-2">
+              <Home className="h-4 w-4 text-indigo-600" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-semibold">{stats.totalProperties}</div>
-            <p className="text-xs text-zinc-500">Active properties</p>
+            <div className="text-3xl font-semibold tracking-tight">{stats.totalProperties}</div>
+            <p className="text-xs text-slate-500 mt-1">Active properties</p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover:shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-sm font-medium">Active Leases</CardTitle>
-            <FileText className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-slate-600">Active Leases</CardTitle>
+            <div className="rounded-lg bg-emerald-100 p-2">
+              <FileText className="h-4 w-4 text-emerald-600" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-semibold">{stats.activeLeases}</div>
-            <p className="text-xs text-zinc-500">Currently rented</p>
+            <div className="text-3xl font-semibold tracking-tight">{stats.activeLeases}</div>
+            <p className="text-xs text-slate-500 mt-1">Currently rented</p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover:shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-sm font-medium">Tenants</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-slate-600">Tenants</CardTitle>
+            <div className="rounded-lg bg-amber-100 p-2">
+              <Users className="h-4 w-4 text-amber-600" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-semibold">{stats.totalTenants}</div>
-            <p className="text-xs text-zinc-500">Across all properties</p>
+            <div className="text-3xl font-semibold tracking-tight">{stats.totalTenants}</div>
+            <p className="text-xs text-slate-500 mt-1">Across all properties</p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover:shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-sm font-medium">Open Issues</CardTitle>
-            <Wrench className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-slate-600">Open Issues</CardTitle>
+            <div className="rounded-lg bg-rose-100 p-2">
+              <Wrench className="h-4 w-4 text-rose-600" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-semibold">{stats.openMaintenance}</div>
-            <p className="text-xs text-zinc-500">Maintenance requests</p>
+            <div className="text-3xl font-semibold tracking-tight">{stats.openMaintenance}</div>
+            <p className="text-xs text-slate-500 mt-1">Maintenance requests</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-blue-50 border-blue-200">
+        <Card className="hover:shadow-md transition-shadow bg-gradient-to-br from-emerald-50 to-white border-emerald-100">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-sm font-medium text-blue-900">
-              Monthly Income
-            </CardTitle>
-            <TrendingUp className="h-4 w-4 text-blue-600" />
+            <CardTitle className="text-sm font-medium text-emerald-700">Monthly Income</CardTitle>
+            <div className="rounded-lg bg-emerald-100 p-2">
+              <TrendingUp className="h-4 w-4 text-emerald-600" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-semibold text-blue-900">
+            <div className="text-3xl font-semibold tracking-tight text-emerald-700">
               ${stats.monthlyIncome.toLocaleString()}
             </div>
-            <p className="text-xs text-blue-700">Expected this month</p>
+            <p className="text-xs text-emerald-600 mt-1">Expected this month</p>
           </CardContent>
         </Card>
       </div>
 
       {/* Quick Actions + Recent Activity */}
       <div className="grid gap-6 lg:grid-cols-2">
-        <Card>
+        <Card className="hover:shadow-md transition-shadow">
           <CardHeader>
-            <CardTitle>Quick Actions</CardTitle>
+            <CardTitle className="text-lg">Quick Actions</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-3">
-            <Button>Add Property</Button>
-            <Button variant="outline">Add Tenant</Button>
-            <Button variant="outline">Record Payment</Button>
-            <Button variant="outline">New Maintenance Request</Button>
+            <Button className="rounded-xl">+ Add Property</Button>
+            <Button variant="outline" className="rounded-xl">Add Tenant</Button>
+            <Button variant="outline" className="rounded-xl">Record Payment</Button>
+            <Button variant="outline" className="rounded-xl">New Maintenance Request</Button>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover:shadow-md transition-shadow">
           <CardHeader>
-            <CardTitle>Recent Activity</CardTitle>
+            <CardTitle className="text-lg">Recent Activity</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-sm">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between py-1 border-b border-slate-100 last:border-none">
               <div>
                 Rent received from <span className="font-medium">Sarah Johnson</span>
               </div>
-              <Badge variant="outline">Today</Badge>
+              <Badge variant="outline" className="text-emerald-600 border-emerald-200">Today</Badge>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between py-1 border-b border-slate-100 last:border-none">
               <div>
                 New maintenance request for <span className="font-medium">124 Oak St</span>
               </div>
               <Badge variant="secondary">2 days ago</Badge>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between py-1">
               <div>
                 Lease renewed for <span className="font-medium">Michael Chen</span>
               </div>
@@ -125,7 +133,7 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      <div className="text-center text-xs text-zinc-500 pt-8">
+      <div className="text-center text-xs text-slate-400 pt-4">
         This is a foundation shell. Real data and full functionality coming in Phase 1.
       </div>
     </div>

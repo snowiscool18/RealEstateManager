@@ -17,7 +17,7 @@ export default async function AppLayout({
   // }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-zinc-50">
+    <div className="flex h-screen overflow-hidden bg-[rgb(var(--background))]">
       {/* Sidebar */}
       <Sidebar />
 
@@ -25,7 +25,7 @@ export default async function AppLayout({
       <div className="flex flex-1 flex-col overflow-hidden">
         <Header user={session?.user} />
 
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto p-6 md:p-8">
           <div className="mx-auto max-w-7xl">{children}</div>
         </main>
       </div>

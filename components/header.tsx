@@ -31,9 +31,9 @@ export function Header({ user }: HeaderProps) {
     : "U";
 
   return (
-    <header className="flex h-16 items-center justify-between border-b bg-white px-6">
+    <header className="flex h-16 items-center justify-between border-b bg-white/80 backdrop-blur-md px-6">
       <div className="flex items-center gap-4">
-        <div className="text-sm text-zinc-600 hidden md:block">
+        <div className="text-sm text-slate-600 hidden md:block">
           Good morning, {user?.name?.split(" ")[0] || "there"} 👋
         </div>
       </div>
@@ -42,18 +42,20 @@ export function Header({ user }: HeaderProps) {
         {user ? (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="flex items-center gap-2 px-2">
-                <Avatar className="h-8 w-8">
+              <Button variant="ghost" className="flex items-center gap-2.5 px-2 h-9 rounded-xl hover:bg-slate-100">
+                <Avatar className="h-8 w-8 ring-1 ring-slate-200">
                   <AvatarImage src={user.image || undefined} alt={user.name || ""} />
-                  <AvatarFallback className="text-xs">{initials}</AvatarFallback>
+                  <AvatarFallback className="text-xs bg-slate-100 text-slate-600">
+                    {initials}
+                  </AvatarFallback>
                 </Avatar>
-                <div className="hidden text-left text-sm md:block">
-                  <div className="font-medium">{user.name}</div>
-                  <div className="text-xs text-zinc-500">{user.email}</div>
+                <div className="hidden text-left md:block">
+                  <div className="font-medium text-sm leading-none">{user.name}</div>
+                  <div className="text-[10px] text-slate-500 mt-1">{user.email}</div>
                 </div>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
+            <DropdownMenuContent align="end" className="w-56 rounded-xl">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
@@ -75,7 +77,7 @@ export function Header({ user }: HeaderProps) {
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="outline" size="sm" asChild className="rounded-xl">
             <a href="/login">Sign in</a>
           </Button>
         )}
