@@ -17,7 +17,7 @@ export default function DashboardPage() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Dashboard</h1>
-        <p className="text-muted-foreground mt-1">
+        <p className="text-zinc-600 mt-1">
           Overview of your rental portfolio
         </p>
       </div>
@@ -31,7 +31,7 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold">{stats.totalProperties}</div>
-            <p className="text-xs text-muted-foreground">Active properties</p>
+            <p className="text-xs text-zinc-500">Active properties</p>
           </CardContent>
         </Card>
 
@@ -42,7 +42,7 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold">{stats.activeLeases}</div>
-            <p className="text-xs text-muted-foreground">Currently rented</p>
+            <p className="text-xs text-zinc-500">Currently rented</p>
           </CardContent>
         </Card>
 
@@ -53,7 +53,7 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold">{stats.totalTenants}</div>
-            <p className="text-xs text-muted-foreground">Across all properties</p>
+            <p className="text-xs text-zinc-500">Across all properties</p>
           </CardContent>
         </Card>
 
@@ -64,7 +64,7 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold">{stats.openMaintenance}</div>
-            <p className="text-xs text-muted-foreground">Maintenance requests</p>
+            <p className="text-xs text-zinc-500">Maintenance requests</p>
           </CardContent>
         </Card>
 
@@ -125,7 +125,7 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      <div className="text-center text-xs text-zinc-400 pt-8">
+      <div className="text-center text-xs text-zinc-500 pt-8">
         This is a foundation shell. Real data and full functionality coming in Phase 1.
       </div>
     </div>

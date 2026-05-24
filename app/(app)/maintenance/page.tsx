@@ -5,7 +5,7 @@ export default function MaintenancePage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Maintenance</h1>
-        <p className="text-muted-foreground">Track and manage maintenance requests</p>
+        <p className="text-zinc-600">Track and manage maintenance requests</p>
       </div>
 
       <Card>
@@ -13,7 +13,7 @@ export default function MaintenancePage() {
           <CardTitle>Open Requests</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-muted-foreground">
+          <div className="text-zinc-700">
             Maintenance request workflow will be implemented in Phase 4.
           </div>
         </CardContent>

@@ -33,7 +33,7 @@ export function Header({ user }: HeaderProps) {
   return (
     <header className="flex h-16 items-center justify-between border-b bg-white px-6">
       <div className="flex items-center gap-4">
-        <div className="text-sm text-zinc-500 hidden md:block">
+        <div className="text-sm text-zinc-600 hidden md:block">
           Good morning, {user?.name?.split(" ")[0] || "there"} 👋
         </div>
       </div>

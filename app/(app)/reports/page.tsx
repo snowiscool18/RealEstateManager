@@ -5,7 +5,7 @@ export default function ReportsPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Reports</h1>
-        <p className="text-muted-foreground">Income, occupancy, and performance reports</p>
+        <p className="text-zinc-600">Income, occupancy, and performance reports</p>
       </div>
 
       <Card>
@@ -13,7 +13,7 @@ export default function ReportsPage() {
           <CardTitle>Reports &amp; Analytics</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-muted-foreground">
+          <div className="text-zinc-700">
             Dashboard reports and exports will be added in Phase 4.
           </div>
         </CardContent>

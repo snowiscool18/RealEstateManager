@@ -5,7 +5,7 @@ export default function TenantsPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Tenants</h1>
-        <p className="text-muted-foreground">Manage tenant information and contacts</p>
+        <p className="text-zinc-600">Manage tenant information and contacts</p>
       </div>
 
       <Card>
@@ -13,7 +13,7 @@ export default function TenantsPage() {
           <CardTitle>All Tenants</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-muted-foreground">
+          <div className="text-zinc-700">
             Tenant management UI coming in Phase 1.
           </div>
         </CardContent>
