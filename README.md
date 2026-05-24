@@ -36,13 +36,26 @@ pnpm install
 
 ### Environment Variables
 
-Copy the example env file and fill in your values:
+1. Copy the example file:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-```bash
-cp .env.example .env.local
-```
+2. **Database Setup (Required)**
 
-Required variables will be documented as features are added (database URL, auth secrets, etc.).
+   This app uses PostgreSQL. We recommend a free hosted database:
+
+   - **Neon** (recommended): https://neon.tech → Create project → Copy connection string
+   - **Supabase**: https://supabase.com → New project → Project Settings → Database → Connection string
+
+   Paste your connection string into `DATABASE_URL` in `.env.local`.
+
+3. Generate the Prisma client after setting your DATABASE_URL:
+   ```bash
+   npx prisma generate
+   ```
+
+Required variables will be added as features are implemented (Auth secrets, etc.).
 
 ### Run the Development Server
 

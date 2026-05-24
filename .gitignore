@@ -45,3 +45,5 @@ AGENTS.md
 CLAUDE.md
 CLAUDE.local.md
 .grok/
+
+/lib/generated/prisma
