@@ -16,7 +16,7 @@ A modern web application for individual landlords to manage their rental propert
 - **Framework**: Next.js 15 (App Router) + TypeScript
 - **Styling**: Tailwind CSS 4 + shadcn/ui
 - **Database**: PostgreSQL + Prisma ORM
-- **Auth**: Auth.js v5
+- **Auth**: Auth.js v5 (with Prisma adapter — prepared for magic links)
 - **Deployment**: Vercel
 
 ## Getting Started
@@ -80,6 +80,12 @@ This project follows a feature-based architecture:
 - `npm run dev` – Start development server
 - `npm run build` – Production build
 - `npm run lint` – Run ESLint
+
+## Current Status (Foundation)
+
+- Next.js 15 + TypeScript + Tailwind + shadcn/ui base set up
+- Full Prisma schema defined (Property, Tenant, Lease, etc.)
+- Auth.js v5 + Prisma adapter initialized (magic link email provider prepared)
 
 ## Roadmap
 
