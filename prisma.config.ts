@@ -8,7 +8,10 @@ export default defineConfig({
   migrations: {
     path: "prisma/migrations",
   },
-  datasource: {
-    url: process.env["DATABASE_URL"],
-  },
+  // Only provide datasource URL when available.
+  // This prevents prisma generate from failing during Vercel builds
+  // before a real DATABASE_URL has been added.
+  datasource: process.env["DATABASE_URL"]
+    ? { url: process.env["DATABASE_URL"] }
+    : undefined,
 });
